@@ -1,0 +1,4 @@
+﻿  DM.cpp
+c:\users\markus.veit\source\repos\dm\dm\dm.cpp(14): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\markus.veit\source\repos\dm\dm\dm.cpp(23): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DM.vcxproj -> C:\Users\markus.veit\source\repos\DM\Debug\DM.exe
