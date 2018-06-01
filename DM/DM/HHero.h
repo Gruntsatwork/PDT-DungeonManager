@@ -1,14 +1,9 @@
 #pragma once
 #include <iostream>
 #include <string>
+#include "HMonster.h"
 #ifndef HHero
 #define HHero
-
-
-
-
-
-
 
 class Hero
 {
@@ -21,9 +16,12 @@ private:
 	int h_hp;
 	int h_str;
 	int h_dex;
+	bool h_dungeon;
+	bool h_incombat;
 
 public:
-	Hero(int id, std::string name, int level, int exp, int hp, int str, int dex) : h_ID(id), h_name(name), h_level(level), h_exp(exp), h_hp(hp), h_str(str), h_dex(dex)
+	Hero(int id, std::string name, int level, int exp, int hp, int str, int dex, bool dungeon, bool incombat) : 
+		h_ID(id), h_name(name), h_level(level), h_exp(exp), h_hp(hp), h_str(str), h_dex(dex), h_dungeon(dungeon), h_incombat(incombat)
 	{}
 	void printHero()
 	{
@@ -36,6 +34,12 @@ public:
 			<< "Dexterity: " << h_dex << std::endl
 			<< "--------------------------------------------------" << std::endl;
 	}
+
+	friend void Herodamage(int monster_attack)
+	{
+		h_hp -= monster_attack;
+	}
+	
 };
 
 #endif // !"hero.h"

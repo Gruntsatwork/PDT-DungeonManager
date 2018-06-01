@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 #include <iostream>
-
+#include "HHero.h"
 #ifndef HMonster
 #define HMonster
 
@@ -13,9 +13,10 @@ private:
 	int m_hp;
 	int m_str;
 	int m_dex;
+	bool m_incombat;
 
 public:
-	Monster(std::string type, int level, int hp, int str, int dex) : m_type(type), m_level(level), m_hp(hp),m_str(str), m_dex(dex)
+	Monster(std::string type, int level, int hp, int str, int dex, bool incombat) : m_type(type), m_level(level), m_hp(hp),m_str(str), m_dex(dex), m_incombat(incombat)
 	{}
 
 	void printMonster()
@@ -28,7 +29,10 @@ public:
 		<< "--------------------------------------------------" << std::endl;
 	}
 
-	int monster_hp = m_hp;
+	friend void Monsterdamage(int hero_attack)
+	{
+		m_hp -= hero_attack;
+	}
 
 };
 
