@@ -30,12 +30,18 @@
     <ClInclude Include="HMonster.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CombatHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="DM.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

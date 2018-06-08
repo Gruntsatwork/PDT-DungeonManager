@@ -29,11 +29,6 @@ public:
 		<< "--------------------------------------------------" << std::endl;
 	}
 
-	friend void Monsterdamage(int hero_attack)
-	{
-		m_hp -= hero_attack;
-	}
-
 };
 
 #endif // !HMonster

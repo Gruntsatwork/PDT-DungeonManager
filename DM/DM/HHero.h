@@ -34,11 +34,6 @@ public:
 			<< "Dexterity: " << h_dex << std::endl
 			<< "--------------------------------------------------" << std::endl;
 	}
-
-	friend void Herodamage(int monster_attack)
-	{
-		h_hp -= monster_attack;
-	}
 	
 };
 
