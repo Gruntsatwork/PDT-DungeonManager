@@ -13,28 +13,22 @@ int main()
 	
 	
 	
-	bool InitiateCombat = false; // initiate combat
 
-	bool inParty; // Check who is in the party
 
-	std::vector<Hero> h;
+	std::vector< std::vector<int> > VCombatants; // Create a dynamic 2-dimensional array using vector
 
-	if (Hero.inParty == true)
-	{
-		h.push_back(h&);
+
+	for (int i = 0; i < 10; i++) {
+		std::vector<int> row; 
+		for (int j = 0; j < 2; j++) {
+			row.push_back(i*j); }
+		VCombatants.push_back(row);
 	}
-
-	 // Create an array of the combatants
-	
-
 	// Sort by dexterity
 
 	// Flag as ready
 
-	int CombatRound = 0;
-	do CombatRound += 1;
-
-			while (InitiateCombat == true);// Fastest Character attacks
+	// Fastest Character attacks
 
 	// Flag as unready
 

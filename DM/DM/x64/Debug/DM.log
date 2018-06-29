@@ -1,7 +1,4 @@
 ﻿  DM.cpp
 e:\pdt-dungeonmanager\dm\dm\dm.cpp(15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  CombatHandler.cpp
-e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(22): error C2059: syntax error: '.'
-e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(23): error C2143: syntax error: missing ';' before '{'
-e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(24): error C2059: syntax error: ')'
-  Generating Code...
+DM.obj : error LNK2005: main already defined in CombatHandler.obj
+E:\PDT-DungeonManager\DM\x64\Debug\DM.exe : fatal error LNK1169: one or more multiply defined symbols found
