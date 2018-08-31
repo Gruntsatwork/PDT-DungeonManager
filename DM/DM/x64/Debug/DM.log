@@ -1,4 +1,18 @@
 ﻿  DM.cpp
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-DM.obj : error LNK2005: main already defined in CombatHandler.obj
-E:\PDT-DungeonManager\DM\x64\Debug\DM.exe : fatal error LNK1169: one or more multiply defined symbols found
+e:\pdt-dungeonmanager\dm\dm\hhero.h(40): error C2062: type 'int' unexpected
+e:\pdt-dungeonmanager\dm\dm\hhero.h(45): error C2062: type 'int' unexpected
+e:\pdt-dungeonmanager\dm\dm\dm.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  CombatHandler.cpp
+e:\pdt-dungeonmanager\dm\dm\hhero.h(40): error C2062: type 'int' unexpected
+e:\pdt-dungeonmanager\dm\dm\hhero.h(45): error C2062: type 'int' unexpected
+e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(19): warning C4552: '+': operator has no effect; expected operator with side-effect
+e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(22): error C2664: 'void std::vector<int,std::allocator<_Ty>>::push_back(_Ty &&)': cannot convert argument 1 from 'int (__cdecl Hero::* )(void)' to 'const int &'
+          with
+          [
+              _Ty=int
+          ]
+  e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(22): note: Reason: cannot convert from 'int (__cdecl Hero::* )(void)' to 'const int'
+  e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(22): note: There is no context in which this conversion is possible
+e:\pdt-dungeonmanager\dm\dm\combathandler.cpp(23): error C2143: syntax error: missing ';' before '}'
+  Generating Code...
+cl : Command line warning D9028: minimal rebuild failure, reverting to normal build

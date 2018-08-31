@@ -3,27 +3,9 @@
 #include <string>
 #include <iostream>
 
+#ifndef CombatHandler_h
+#define CombatHandler_h
 
-#ifndef "CombatHandler.h"
-define "CombatHandler.h"
+void CreateCombatantsArray();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#endif // !"CombatHandler.h"
+#endif // !CombatHandler_h

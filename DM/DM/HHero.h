@@ -34,6 +34,16 @@ public:
 			<< "Dexterity: " << h_dex << std::endl
 			<< "--------------------------------------------------" << std::endl;
 	}
+
+	int GetID()
+	{
+		return int h_ID;
+	}
+
+	int GetDEX()
+	{
+		return int h_dex;
+	}
 	
 };
 

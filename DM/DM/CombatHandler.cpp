@@ -7,23 +7,22 @@
 #include <cstdlib>
 #include <time.h>
 #include <vector>
+#include <type_traits>
 
-int main()
+
+
+int Sent;
+	
+void CreateCombatantsArray() // Create a 1d vector array that holds ID followed by Dex score
 {
-	
-	
-	
-
-
-	std::vector< std::vector<int> > VCombatants; // Create a dynamic 2-dimensional array using vector
-
-
-	for (int i = 0; i < 10; i++) {
-		std::vector<int> row; 
-		for (int j = 0; j < 2; j++) {
-			row.push_back(i*j); }
-		VCombatants.push_back(row);
+	std::vector<int> Combatants;
+	for (int i = 0; i < Combatants.capacity(); i+2)
+	{
+		Combatants.push_back(Sent);
+		Combatants.push_back(&Hero::GetDEX)
 	}
+}
+
 	// Sort by dexterity
 
 	// Flag as ready
@@ -51,4 +50,3 @@ int main()
 	// change all unready flags to ready
 
 	// repeat 
-}
