@@ -11,17 +11,17 @@
 
 
 
-int Sent;
+//int Sent;
 	
-void CreateCombatantsArray() // Create a 1d vector array that holds ID followed by Dex score
-{
-	std::vector<int> Combatants;
-	for (int i = 0; i < Combatants.capacity(); i+2)
-	{
-		Combatants.push_back(Sent);
-		Combatants.push_back(&Hero::GetDEX)
-	}
-}
+// void CreateCombatantsArray() // Create a 1d vector array that holds ID followed by Dex score
+//{
+//	std::vector<int> Combatants;
+//	for (int i = 0; i < Combatants.capacity(); i+2)
+//	{
+//		Combatants.push_back(Sent);
+//		Combatants.push_back(&Hero::GetDEX)
+//	}
+//}
 
 	// Sort by dexterity
 

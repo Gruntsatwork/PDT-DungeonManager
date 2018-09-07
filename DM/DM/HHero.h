@@ -35,16 +35,6 @@ public:
 			<< "--------------------------------------------------" << std::endl;
 	}
 
-	int GetID()
-	{
-		return int h_ID;
-	}
-
-	int GetDEX()
-	{
-		return int h_dex;
-	}
-	
 };
 
 #endif // !"hero.h"

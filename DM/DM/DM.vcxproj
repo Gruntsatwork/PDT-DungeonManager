@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CombatHandler.h" />
+    <ClInclude Include="GenerateHero.h" />
     <ClInclude Include="HDungeon.h" />
     <ClInclude Include="HHero.h" />
     <ClInclude Include="HMonster.h" />
@@ -153,6 +154,7 @@
   <ItemGroup>
     <ClCompile Include="CombatHandler.cpp" />
     <ClCompile Include="DM.cpp" />
+    <ClCompile Include="GenerateHero.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
