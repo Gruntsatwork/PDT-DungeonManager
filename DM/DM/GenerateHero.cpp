@@ -9,7 +9,7 @@
 #include <vector>
 #include "GenerateHero.h"
 
-int g_HeroeID = 0;
+int g_HeroID = 0;
 
 void GenerateHero()
 {
@@ -17,6 +17,9 @@ void GenerateHero()
 	srand(time(NULL)); /* generate secret number between 1 and 10: */
 	temprand = rand() % 5 + 1;
 
-	Hero hero(g_HeroeID, "Herotest", temprand, temprand, temprand, temprand, temprand, true, true);
+	Hero hero(g_HeroID, "Herotest", temprand, temprand, temprand, temprand, temprand, true, true);
 	void reseed();
+	&Hero.printHero;
+	std::cout << "Hello" << std::endl;
+	g_HeroID++;
 }

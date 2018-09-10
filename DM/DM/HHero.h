@@ -9,8 +9,8 @@ class Hero
 {
 private:
 
-	const int h_ID;
-	const std::string h_name;
+	int h_ID;
+	std::string h_name;
 	int h_level;
 	int h_exp;
 	int h_hp;
@@ -23,6 +23,7 @@ public:
 	Hero(int id, std::string name, int level, int exp, int hp, int str, int dex, bool dungeon, bool incombat) : 
 		h_ID(id), h_name(name), h_level(level), h_exp(exp), h_hp(hp), h_str(str), h_dex(dex), h_dungeon(dungeon), h_incombat(incombat)
 	{}
+
 	void printHero()
 	{
 		std::cout << "ID: " << h_ID << std::endl

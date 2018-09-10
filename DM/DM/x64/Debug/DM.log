@@ -1,7 +1,3 @@
-﻿  DM.cpp
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(24): error C3927: '->': trailing return type is not allowed after a non-function declarator
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(24): error C3484: syntax error: expected '->' before the return type
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(24): error C3613: missing return type after '->' ('int' assumed)
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(24): error C2182: 'Hero': illegal use of type 'void'
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(24): error C2146: syntax error: missing ';' before identifier 'printHero'
-e:\pdt-dungeonmanager\dm\dm\dm.cpp(24): error C3861: 'printHero': identifier not found
+﻿  GenerateHero.cpp
+e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(22): error C2276: '&': illegal operation on bound member function expression
