@@ -1,3 +1,13 @@
-﻿  GenerateHero.cpp
-e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(22): error C2276: '&': illegal operation on bound member function expression
+﻿  GenerateMonster.cpp
+e:\pdt-dungeonmanager\dm\dm\generatemonster.cpp(16): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+e:\pdt-dungeonmanager\dm\dm\generatemonster.cpp(19): error C2664: 'Monster::Monster(Monster &&)': cannot convert argument 1 from 'MonsterType' to 'std::string'
+  e:\pdt-dungeonmanager\dm\dm\generatemonster.cpp(19): note: No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+  Generating Code...
+  Compiling...
+  CombatHandler.cpp
+  Generating Code...
+  Compiling...
+  GenerateHero.cpp
+e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(18): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DM.cpp
+  Generating Code...

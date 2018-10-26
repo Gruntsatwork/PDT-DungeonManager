@@ -29,6 +29,18 @@ public:
 		<< "--------------------------------------------------" << std::endl;
 	}
 
+	std::string GetName(Monster &monster)
+	{
+		return monster.m_type;
+	}
+};
+
+enum MonsterType
+{
+	Goblin,
+	Orc,
+	Minotaur,
+	Dragon
 };
 
 #endif // !HMonster

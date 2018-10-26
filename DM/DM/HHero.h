@@ -36,6 +36,11 @@ public:
 			<< "--------------------------------------------------" << std::endl;
 	}
 
+	int GetID(Hero &hero)
+	{
+		return hero.h_ID;
+	}
+
 };
 
 #endif // !"hero.h"
