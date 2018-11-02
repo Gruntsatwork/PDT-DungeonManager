@@ -4,6 +4,7 @@
 #include "HHero.h"
 #ifndef HMonster
 #define HMonster
+#include <vector>
 
 class Monster
 {
@@ -33,15 +34,29 @@ public:
 	{
 		return monster.m_type;
 	}
+	int GetLevel(Monster &monster)
+	{
+		return monster.m_level;
+	}
+	int GetHP(Monster &monster)
+	{
+		return monster.m_hp;
+	}
+	int GetSTR(Monster &monster)
+	{
+		return monster.m_str;
+	}
+	int GetDEX(Monster &monster)
+	{
+		return monster.m_dex;
+	}
+	bool InCombat(Monster &monster)
+	{
+		return monster.m_incombat;
+	}
 };
 
-enum MonsterType
-{
-	Goblin,
-	Orc,
-	Minotaur,
-	Dragon
-};
+
 
 #endif // !HMonster
 

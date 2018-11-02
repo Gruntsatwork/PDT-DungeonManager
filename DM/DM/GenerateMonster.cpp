@@ -10,13 +10,23 @@
 #include "GenerateMonster.h"
 
 
+
+
 void GenerateMonster()
 {
-	int temprand;
-	srand(time(NULL)); /* generate secret number between 1 and 10: */
-	temprand = rand() % 5 + 1;
+	int temprand, temprand1, temprand2, temprand3, temprand4;
 
-	Monster monster( , temprand, temprand, temprand, temprand, true);
+	srand(time(NULL)); /* generate secret number between 1 and 10: */
+	temprand1 = rand() % 4 + 1;
+	temprand1 = rand() % 5 + 1;
+	temprand2 = rand() % 5 + 1;
+	temprand3 = rand() % 5 + 1;
+	temprand4 = rand() % 5 + 1;
+
+	std::vector<std::string> MonsterType = { "Goblin", "Orc", "Minotaur", "Dragon" };
+	std::string MType = MonsterType.at(rand() % 3 + 1);
+
+	Monster monster(MType, temprand1, temprand2, temprand3, temprand4, true);
 	void reseed();
 	monster.printMonster();
 	std::cout << "Hello 2" << std::endl;
