@@ -28,5 +28,28 @@ public:
 			<< "Type of Monster: " << d_typeofmonster << std::endl
 			<< "--------------------------------------------------" << std::endl;
 	}
+
+	int GetID(Dungeon &dungeon)
+	{
+		return dungeon.d_ID;
+	}
+
+	std::string GetName(Dungeon &dungeon)
+	{
+		return dungeon.d_name;
+	}
+	int GetLevel(Dungeon &dungeon)
+	{
+		return dungeon.d_Level;
+	}
+	int GetNrMonsters(Dungeon &dungeon)
+	{
+		return dungeon.d_nrmonsters;
+	}
+	std::string GetTypeofMonster(Dungeon &dungeon)
+	{
+		return dungeon.d_typeofmonster;
+	}
+
 };
 #endif // !HDungeon

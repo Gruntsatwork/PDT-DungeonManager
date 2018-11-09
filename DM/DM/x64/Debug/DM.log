@@ -1,4 +1,3 @@
-﻿  GenerateHero.cpp
-e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(44): error C2601: 'writeSave': local function definitions are illegal
-  e:\pdt-dungeonmanager\dm\dm\generatehero.cpp(19): note: this line contains a '{' which has not yet been matched
+﻿  GenerateDungeonLevel.cpp
+e:\pdt-dungeonmanager\dm\dm\generatedungeonlevel.cpp(22): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  DM.vcxproj -> E:\PDT-DungeonManager\DM\x64\Debug\DM.exe

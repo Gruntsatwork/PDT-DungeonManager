@@ -40,11 +40,4 @@ void GenerateHero()
 	std::cout << "You created the Hero with ID " << hero.GetID(hero) << " from the " << hero.GetFamilia(hero) << " Family" << std::endl;
 	g_HeroID++;
 
-	void writeSave(Hero &hero)
-	{
-		ofstream myfile;
-		myfile.open("save.txt");
-		myfile << "This is a test.\n" << hero.GetID(hero) << "Test2.\n";
-		myfile.close();
-	}
 }

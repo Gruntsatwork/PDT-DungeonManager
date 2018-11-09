@@ -8,13 +8,14 @@
 #include <time.h>
 #include <vector>
 #include "GenerateMonster.h"
+#include "GenerateDungeonLevel.h"
 
 
 
 
 void GenerateMonster()
 {
-	int temprand, temprand1, temprand2, temprand3, temprand4;
+	int temprand1, temprand2, temprand3, temprand4;
 
 	srand(time(NULL)); /* generate secret number between 1 and 10: */
 	temprand1 = rand() % 4 + 1;
@@ -22,6 +23,7 @@ void GenerateMonster()
 	temprand2 = rand() % 5 + 1;
 	temprand3 = rand() % 5 + 1;
 	temprand4 = rand() % 5 + 1;
+
 
 	std::vector<std::string> MonsterType = { "Goblin", "Orc", "Minotaur", "Dragon" };
 	std::string MType = MonsterType.at(rand() % 3 + 1);

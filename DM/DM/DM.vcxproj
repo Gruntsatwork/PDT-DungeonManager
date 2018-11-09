@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="CombatHandler.h" />
+    <ClInclude Include="GenerateDungeonLevel.h" />
     <ClInclude Include="GenerateHero.h" />
     <ClInclude Include="GenerateMonster.h" />
     <ClInclude Include="HDungeon.h" />
@@ -156,6 +157,7 @@
     <ClCompile Include="CombatHandler.cpp" />
     <ClCompile Include="DM.cpp" />
     <ClCompile Include="Familia.cpp" />
+    <ClCompile Include="GenerateDungeonLevel.cpp" />
     <ClCompile Include="GenerateHero.cpp" />
     <ClCompile Include="GenerateMonster.cpp" />
     <ClCompile Include="stdafx.cpp">
