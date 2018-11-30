@@ -3,6 +3,10 @@
 #define GenerateHero_H
 
 void GenerateHero();
+void ListHero();
+void FindHero();
+void DeleteSave();
+void ReadSave();
 
 
 #endif // !"GenerateHero"

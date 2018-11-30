@@ -30,6 +30,18 @@ public:
 		<< "--------------------------------------------------" << std::endl;
 	}
 
+	friend std::ostream& operator<< (std::ostream &out, const Monster &monster)
+	{
+		std::cout << "Monster Type: " << monster.m_type << std::endl
+			<< "Monster Level: " << monster.m_level << std::endl
+			<< "Monster HP: " << monster.m_hp << std::endl
+			<< "Monster Strength: " << monster.m_str << std::endl
+			<< "Monster Dexterity: " << monster.m_dex << std::endl
+			<< "--------------------------------------------------" << std::endl;
+
+		return out;
+	}
+
 	std::string GetName(Monster &monster)
 	{
 		return monster.m_type;

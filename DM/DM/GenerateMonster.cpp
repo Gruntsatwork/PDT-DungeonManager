@@ -10,7 +10,9 @@
 #include "GenerateMonster.h"
 #include "GenerateDungeonLevel.h"
 
+using namespace std;
 
+std::vector<Monster> Monsters;
 
 
 void GenerateMonster()
@@ -30,7 +32,29 @@ void GenerateMonster()
 
 	Monster monster(MType, temprand1, temprand2, temprand3, temprand4, true);
 	void reseed();
+	Monsters.push_back(monster);
 	monster.printMonster();
 	std::cout << "Hello 2" << std::endl;
 	std::cout << "You created the Monster with the Name: " << monster.GetName(monster) << std::endl;
+}
+void ListMonster()
+{
+	std::cout << "You have the following monsters to choose from: " << endl;
+	for (auto n : Monsters)
+		std::cout << n << ' ';
+	std::cout << endl;
+
+}
+
+void FindMonster()
+{
+	std::cout << "Which Monster would you like to find?" << std::endl;
+	std::string WhichMonster;
+	std::cin >> WhichMonster;
+	for (auto n : Monsters)
+		if (n.GetName(n) == WhichMonster)
+		{
+			std::cout << n << ' ';
+		}
+	std::cout << endl;
 }

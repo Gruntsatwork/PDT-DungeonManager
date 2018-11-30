@@ -36,6 +36,18 @@ public:
 			<< "Dexterity: " << h_dex << std::endl
 			<< "--------------------------------------------------" << std::endl;
 	}
+	friend std::ostream& operator<<(std::ostream &out, const Hero &hero)
+	{
+		std::cout << "ID: " << hero.h_ID << std::endl
+			<< "Name: " << hero.h_name << std::endl
+			<< "Level: " << hero.h_level << std::endl
+			<< "Experience Points: " << hero.h_exp << std::endl
+			<< "HP: " << hero.h_hp << std::endl
+			<< "Strength: " << hero.h_str << std::endl
+			<< "Dexterity: " << hero.h_dex << std::endl
+			<< "--------------------------------------------------" << std::endl;
+		return out;
+	}
 
 	int GetID(Hero &hero)
 	{
