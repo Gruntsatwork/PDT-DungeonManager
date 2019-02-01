@@ -20,6 +20,9 @@ private:
 	bool h_incombat;
 	std::string h_familia;
 
+	friend class boost::serialization::access;
+	friend std::ostream & operator<<(std::ostream &os, const Hero &h);
+
 public:
 	Hero(int id, std::string name, int level, int exp, int hp, int str, int dex, bool dungeon, bool incombat, std::string familia) : 
 		h_ID(id), h_name(name), h_level(level), h_exp(exp), h_hp(hp), h_str(str), h_dex(dex), h_dungeon(dungeon), h_incombat(incombat), h_familia(familia)

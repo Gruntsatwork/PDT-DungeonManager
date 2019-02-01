@@ -9,6 +9,8 @@
 #include <time.h>
 #include <vector>
 #include "GenerateHero.h"
+#include "boost/archive/text_oarchive.hpp"
+#include "boost/archive/text_iarchive.hpp""
 
 using namespace std;
 
@@ -32,7 +34,7 @@ void GenerateHero()
 	std::vector<std::string> FamName = { "Loki", "Freya", "Zeus", "Hera", "Hestia", "Take" };
 	std::string Familia = FamName.at(rand() % 5 + 1);
 
-
+	g_HeroID++;
 	Hero hero(g_HeroID, HName, temprand1, temprand2, temprand3, temprand4, temprand5, true, true, Familia);
 	void reseed();
 	Heroes.push_back(hero);
@@ -43,7 +45,6 @@ void GenerateHero()
 	hero.printHero();
 	std::cout << "Hello" << std::endl;
 	std::cout << "You created the Hero with ID " << hero.GetID(hero) << " from the " << hero.GetFamilia(hero) << " Family" << std::endl;
-	g_HeroID++;
 
 }
 
@@ -77,7 +78,27 @@ void DeleteSave()
 
 void ReadSave()
 {
-	ifstream file;
-	file.open("Save.txt", std::ios in);
+	int ID;
+	std::string name;
+	int level, exp, hp, strength, dexterity;
+	std::string familia;
 
+	std::ifstream file("Save.txt");
+	if (file.is_open()) {
+		int it;
+		
+		
+
+		file.close();
+	}
+}
+
+void LoadHeroes(int, std::string, int, int, int, int, int, std::string)
+{
+	int ID;
+	std::string name;
+	int level, exp, hp, strength, dexterity;
+	std::string familia;
+	Hero hero(ID, name, level, exp, hp, strength, dexterity, true, true, familia);
+	Heroes.push_back(hero);
 }
