@@ -1,7 +1,4 @@
 #include "stdafx.h"
-#include <iostream>
-#include <fstream>
-#include <string>
 #include "HHero.h"
 #include "HDungeon.h"
 #include "HMonster.h"
@@ -9,10 +6,13 @@
 #include <time.h>
 #include <vector>
 #include "GenerateHero.h"
-#include "boost/archive/text_oarchive.hpp"
-#include "boost/archive/text_iarchive.hpp""
+#include <cstddef> // NULL
+#include <iomanip>
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <sstream>
 
-using namespace std;
 
 std::vector<Hero>Heroes;
 int g_HeroID = 0;
@@ -36,69 +36,136 @@ void GenerateHero()
 
 	g_HeroID++;
 	Hero hero(g_HeroID, HName, temprand1, temprand2, temprand3, temprand4, temprand5, true, true, Familia);
+	std::ofstream file_obj;
+	file_obj.open("Save.txt");
+	file_obj << g_HeroID << '\n' << HName << '\n' << temprand1 << '\n' << temprand2 << '\n' << temprand3 << '\n' << temprand4 << '\n' << temprand5 << '\n' << "true" << '\n' << "true" << '\n' << Familia << '\n';
 	void reseed();
 	Heroes.push_back(hero);
-	ofstream file;
-	file.open("Save.txt", std::ios_base::app);
-	file << hero.GetID(hero) << hero.GetName(hero) << hero.GetLevel(hero) << hero.GetXP(hero) << hero.GetHP(hero) << hero.GetSTR(hero) << hero.GetDEX(hero) << endl;
-	file.close();
 	hero.printHero();
 	std::cout << "Hello" << std::endl;
 	std::cout << "You created the Hero with ID " << hero.GetID(hero) << " from the " << hero.GetFamilia(hero) << " Family" << std::endl;
 
 }
 
-void ListHero()
+void LoadHero()
 {
-	int iterator = 0;
-	std::cout << "You have the following heroes to choose from: " << endl;
-	for (auto n : Heroes)
-		std::cout << n << ' ';
-	std::cout << endl;
+	int temprand1, temprand2, temprand3, temprand4, temprand5;
+	std::string HName;
+	std::string Familia;
+	std::string save;
 
+	std::ifstream file_obj("Save.txt");
+	while (file_obj);
+	{
+		std::getline(file_obj, save);
+		std::stringstream sst(save);
+		sst >> g_HeroID;
+		std::getline(file_obj, HName);
+		std::getline(file_obj, save);
+		std::stringstream s1(save);
+		s1 >> temprand1;
+		std::getline(file_obj,save);
+		std::stringstream s2(save);
+		s2 >> temprand2;
+		std::getline(file_obj, save);
+		std::stringstream s3(save);
+		s3 >> temprand3;
+		std::getline(file_obj, save);
+		std::stringstream s4(save);
+		s4 >> temprand4;
+		std::getline(file_obj, save);
+		std::stringstream s5(save);
+		s5 >> temprand5;
+		std::getline(file_obj, Familia);
+	}
+	Hero hero(g_HeroID, HName, temprand1, temprand2, temprand3, temprand4, temprand5, true, true, Familia);
 }
 
-void FindHero()
-{
-	std::cout << "Which Hero would you like to find?" << std::endl;
-	std::string WhichHero;
-	std::cin >> WhichHero;
-	for (auto n : Heroes)
-		if (n.GetName(n) == WhichHero)
-		{
-			std::cout << n << ' ';
-		}
-	std::cout << endl;
-}
+//void ListHero()
+//{
+//	std::cout << "You have the following heroes to choose from: " << std::endl;
+//	for (auto n : Heroes)
+//		std::cout << n << ' ';
+//	std::cout << std::endl;
+//
+//}
+
+//void FindHero()
+//{
+//	std::cout << "Which Hero would you like to find?" << std::endl;
+//	std::string WhichHero;
+//	std::cin >> WhichHero;
+//	for (auto n : Heroes)
+//		if (n.GetName(n) == WhichHero)
+//		{
+//			std::cout << n << ' ';
+//		}
+//	std::cout << std::endl;
+//}
 
 void DeleteSave()
 {
 	remove("Save.txt");
 }
 
-void ReadSave()
-{
-	int ID;
-	std::string name;
-	int level, exp, hp, strength, dexterity;
-	std::string familia;
+//void MakeSave()
+//{
+//	// create and open a character archive for output
+//	std::ofstream ofs("Save");
+//
+//	// save data to archive
+//	{
+//		boost::archive::text_oarchive oa(ofs);
+//		// write class instance to archive
+//		oa << Heroes;
+//		// archive and stream closed when destructors are called
+//	}
+//}
 
-	std::ifstream file("Save.txt");
-	if (file.is_open()) {
-		int it;
-		
-		
+//int Hero::save()
+//{
+//	std::ofstream file_obj;
+//
+//	file_obj.open("Save.tx", std::ios::app);
+//
+//	Hero hero;
+//
+//
+//
+//}
 
-		file.close();
-	}
-}
+//// void ReadSave()
+//	{// ... some time later restore the class instance to its orginal state
+//	
+//		{
+//			// create and open an archive for input
+//			std::ifstream ifs("Save");
+//			boost::archive::text_iarchive ia(ifs);
+//			// read class state from archive
+//			ia >> Heroes;
+//			// archive and stream closed when destructors are called
+//		}
+//	}
 
-void LoadHeroes(int, std::string, int, int, int, int, int, std::string)
-{
-	int ID;
-	std::string name;
-	int level, exp, hp, strength, dexterity;
-	std::string familia;
-	Hero hero(ID, name, level, exp, hp, strength, dexterity, true, true, familia);
-	Heroes.push_back(hero);
-}
+//void usesave(std::vector<hero>&heroes)
+//{
+//	int load0;
+//	std::string load1;
+//	int load2;
+//	int load3;
+//	int load4;
+//	int load5;
+//	int load6;
+//	bool load7;
+//	bool load8;
+//	std::string load9;
+//
+//	for (auto i : heroes)
+//	{
+//		loadi = i;
+//	}
+//
+//	g_heroid++;
+//	hero hero(g_heroid, loadedname, loadedlevel, loadedexp, loadedhp, loadedstr, loadeddex, true, true, loadedfamilia);
+//	heroes.push_back(hero);
+//}

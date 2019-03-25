@@ -6,7 +6,10 @@ void GenerateHero();
 void ListHero();
 void FindHero();
 void DeleteSave();
-void ReadSave();
+void MakeSave();
+void LoadHero();
+//void Readsave();
+
 
 
 #endif // !"GenerateHero"
